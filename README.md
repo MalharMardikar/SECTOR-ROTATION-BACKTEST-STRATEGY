@@ -6,7 +6,7 @@ regime filtering.
 
 ---
 
-##Architecture
+## Architecture
 
 Kenneth French Data Library --> Python (pandas, numpy) --> Strategy Backtesting --> Performance Analysis
 
