@@ -36,10 +36,10 @@ Kenneth French Data Library --> Python (pandas, numpy) --> Strategy Backtesting 
 
 | Strategy           | CAGR (%) | Sharpe Ratio |
 |--------------------|----------|--------------|
-| Equal Weighted     | 10.94    | 0.452        |
-| Inverse Volatility | 10.89    | 0.467        |
-| Relative Strength  | 13.30    | 0.486        |
-| RS Dynamic         | 12.32    | 0.475        |
+| Equal Weighted     | 10.87    | 0.452        |
+| Inverse Volatility | 10.78    | 0.467        |
+| Relative Strength  | 13.31    | 0.486        |
+| RS Dynamic         | 12.25    | 0.475        |
 
 The Relative Strength strategy outperformed the passive benchmarks by 
 over 20% in CAGR while maintaining the highest Sharpe ratio.
