@@ -1,0 +1,99 @@
+# Sector Rotation Backtest Strategy
+
+A Python-based backtesting framework comparing four portfolio allocation 
+strategies using sector ETF data, Fama-French factors, and MACD-based 
+regime filtering.
+
+---
+
+## Architecture
+
+Kenneth French Data Library --> Python (pandas, numpy) --> Strategy Backtesting --> Performance Analysis
+
+---
+
+## Tech Stack
+
+| Layer              | Tool                        |
+|--------------------|-----------------------------|
+| Data Source        | Kenneth French Data Library |
+| Data Processing    | Python (pandas, numpy)      |
+| Visualization      | matplotlib, seaborn         |
+| Environment        | Jupyter Notebook            |
+
+---
+
+## Strategies Compared
+
+1. **Equal Weighted** — equal allocation across all 49 industries monthly
+2. **Inverse Volatility** — weights inversely proportional to 12-month rolling volatility
+3. **Relative Strength (RS)** — long improving sectors, short weakening sectors using RS Ratio and RS Momentum
+4. **RS Dynamic** — switches between RS strategy and Inverse Volatility based on MACD market signal
+
+---
+
+## Key Results
+
+| Strategy           | CAGR (%) | Sharpe Ratio |
+|--------------------|----------|--------------|
+| Equal Weighted     | 10.94    | 0.452        |
+| Inverse Volatility | 10.89    | 0.467        |
+| Relative Strength  | 13.30    | 0.486        |
+| RS Dynamic         | 12.32    | 0.475        |
+
+The Relative Strength strategy outperformed the passive benchmarks by 
+over 20% in CAGR while maintaining the highest Sharpe ratio.
+
+---
+
+## Cumulative Returns by Strategy
+
+![Strategy Performance](strategy_performance.png)
+
+---
+
+## Return Distribution by Strategy
+
+![Return Distributions](return_distributions.png)
+
+---
+
+## Data Sources
+
+Both datasets are sourced from Kenneth French's Data Library:
+- Fama/French 3 Factors (monthly) — save as `data_ff3.csv`
+- 49 Industry Portfolios (monthly) — save as `data_ind49.csv`
+
+Download from: https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html
+
+Place both files in the `/data` folder before running the notebook.
+
+---
+
+## Repository Structure
+
+    .
+    ├── sector_rotation.ipynb          # Main analysis notebook
+    ├── strategy_performance.png       # Cumulative returns chart
+    ├── return_distributions.png       # Return distribution histograms
+    ├── LICENSE
+    └── README.md
+
+
+---
+
+## Setup
+
+1. Clone the repository
+2. Download both CSV files from Kenneth French's Data Library (links above)
+3. Place them in the `/data` folder
+4. Install dependencies: `pip install pandas numpy matplotlib seaborn`
+5. Run `sector_rotation.ipynb` in Jupyter Notebook
+
+---
+
+## Author
+
+Malhar Mardikar
+https://www.linkedin.com/in/malhar-mardikar-768892287/
+malhar.eduwork@gmail.com
